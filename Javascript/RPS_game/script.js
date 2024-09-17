@@ -40,7 +40,6 @@ function playround(humanchoice, computerchoice) {
         console.log("You Lose");
         
     }
-    console.log("Working");
     
 }
 
