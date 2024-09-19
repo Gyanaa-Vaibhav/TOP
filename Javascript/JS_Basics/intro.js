@@ -156,4 +156,105 @@ console.log(forTheFunction);
 // throws a error cause outside of {}
 // console.log(insideFunction);
 
+// if-else conditionals
 
+let solu = false;
+
+if (solu) {
+    console.log("This returned when it is true");
+} else {
+    console.log("This is returned when it is false");    
+}
+
+/* 
+Strict Equality Operator
+
+3 == "3" : True
+in the above example both are being converted into a common type which doesn't happen in Strict Equality operator
+3 === "3" : False
+
+Strict In-Equality Operator
+
+3 != "3" : False
+in the above example both are being converted into a common type which doesn't happen in Strict Equality operator
+3 !== "3" : True
+
+10 > 4 : True | Greater than Operator
+4 < 10 : True | Less than Operator
+
+*/
+
+function caseInSwitch(val) {
+  var answer = "";
+  switch(val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case "sting too": // Even string works
+      answer = "beta string";
+      break;
+    case 3:
+      answer = "beta";
+      break;
+    case 4:
+      answer = "beta";
+        break; // if break is not given the case skips to next case
+      
+    default:
+      answer = "none" 
+  }
+
+  return answer;  
+}
+
+// Change this value to test
+console.log(caseInSwitch("sting too"));
+
+/*
+Write a switch statement which tests val and sets answer for the following conditions:
+1 - "alpha"
+2 - "beta"
+3 - "gamma"
+4 - "delta"
+*/
+
+//Objects -- Key value pairs
+
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everyone!"],
+  "bracket test": ["ok"]
+};
+
+
+let leo = ourDog.name
+console.log(leo);
+console.log(ourDog.friends);
+
+// Brackets can be used when there is a two word string
+console.log(ourDog["bracket test"]);
+
+//Updating the Properties
+ourDog.name = "Athena"
+
+// Adding Properties
+ourDog.bark = "BOW-bow"
+console.log(ourDog.name);
+console.log(ourDog.bark);
+
+//Deleting Properties
+delete ourDog.bark
+console.log(ourDog.bark);
+
+// Checks for the property
+console.log(ourDog.hasOwnProperty("bark"));
+
+
+// for loop
+let ourArray = []; // you have to create an empty array in order for the push to work
+
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
