@@ -3,35 +3,35 @@
     <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>Basketball Counter</title>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <div class="container">
             <div class="rounds">
                 <h3>Round No : </h3>
-                <div class="roundcount">0</div>
+                <div id="roundcount">0</div>
             </div>
             <div class="scores">
                 <div class="home">
                     <h3>HOME</h3>
-                    <div class="hscore">10</div>
-                    <button class="add1">+1</button>
-                    <button class="add2">+2</button>
-                    <button class="add3">+3</button>
+                    <div id="hscore">0</div>
+                    <button class="add1" onclick="addHomeScore(home,1)">+1</button>
+                    <button class="add2" onclick="addHomeScore(home,2)">+2</button>
+                    <button class="add3" onclick="addHomeScore(home,3)">+3</button>
                 </div>
                 <div class="guest">
                     <h3>GUEST</h3>
-                    <div class="gscore">10</div>
-                    <button class="add1">+1</button>
-                    <button class="add2">+2</button>
-                    <button class="add3">+3</button>
+                    <div id="gscore">0</div>
+                    <button class="add1" onclick="addHomeScore(guest,1)">+1</button>
+                    <button class="add2" onclick="addHomeScore(guest,2)">+2</button>
+                    <button class="add3" onclick="addHomeScore(guest,3)">+3</button>
                 </div>
             </div>
             <div class="options">
-                <button class="addRound">Add Round</button>
-                <button class="reset">Reset</button>
-                <button class="resetall">Reset All</button>
+                <button class="addRound" onclick="addround()">Add Round</button>
+                <button class="reset" onclick="reset()">Reset Score</button>
+                <button class="resetall" onclick="resetAll()">Reset All</button>
             </div>
         </div>
         <script src="index.js"></script>

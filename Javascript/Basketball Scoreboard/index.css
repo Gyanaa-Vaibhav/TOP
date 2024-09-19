@@ -27,11 +27,11 @@ body {
     gap: 50px;
 }
 
-button, .gscore, .hscore{
+button, #gscore, #hscore{
     font-family: "SF Digital",sans-serif;
 }
 
-.gscore,.hscore{
+#gscore, #hscore{
     text-align: center;
     font-size: 80px;
     color: red;
@@ -67,7 +67,7 @@ h3{
     align-items: baseline;
 }
 
-.roundcount{
+#roundcount{
     text-align: center;
     font-size: 36px;
     color: red;
