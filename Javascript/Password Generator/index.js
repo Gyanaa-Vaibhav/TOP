@@ -13,8 +13,19 @@ function genPass() {
     return pas
 }
 
+let p1v = "";
+let p2v = "";
+
 function createPass() {
-    let p1 = genPass();
-    pass1.textContent = p1;
-    pass2.textContent = genPass();
+    p1v = genPass()
+    pass1.textContent = p1v;
+
+    p2v = genPass()
+    pass2.textContent = p2v;   
 }
+
+function copyText(par) {
+    navigator.clipboard.writeText(par);
+}
+
+
