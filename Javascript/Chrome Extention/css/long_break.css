@@ -12,6 +12,7 @@ body{
     font-family: 'Arial-Rounded-Bold','Courier New', Courier, monospace;
     background-color: #397098;
     text-align: center;
+    min-width: 250px;
 }
 
 h1{
