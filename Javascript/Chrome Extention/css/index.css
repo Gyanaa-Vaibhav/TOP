@@ -78,3 +78,7 @@ button:active {
     color: white;
 }
 
+#reset{
+    color: #A54E4E;
+    margin-top: 10px;
+}

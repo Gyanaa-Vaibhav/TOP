@@ -9,6 +9,7 @@ const sCount = document.querySelector(".counter")
 let count = 0;
 let timeCounter = 1500000;
 var x;
+const reset = document.getElementById("reset");
 
 if (localStorage.getItem("timer")) {
   timer.textContent = localStorage.getItem("timer")
@@ -68,15 +69,19 @@ const startTimer = function () {
     if (minutes < 10 && seconds < 10) {
       let t = document.querySelector(".timer").textContent = "0" + minutes + ":0" + seconds;
       localStorage.setItem("time", t)
+      localStorage.setItem("timeMS", distance)
     } else if (seconds < 10) {
       let t = document.querySelector(".timer").textContent = minutes + ":" + seconds + "0";
       localStorage.setItem("time", t)
+      localStorage.setItem("timeMS", distance)
     } else if (minutes < 10) {
       let t = document.querySelector(".timer").textContent = `0${minutes}:${seconds}`;
       localStorage.setItem("time", t)
+      localStorage.setItem("timeMS", distance)
     } else {
       let t = document.querySelector(".timer").textContent = `${minutes}:${seconds}`;
       localStorage.setItem("time", t)
+      localStorage.setItem("timeMS", distance)
     }
     
     if (distance < 0) {
@@ -91,6 +96,7 @@ const startTimer = function () {
       clearInterval(x);
       localStorage.clear();
       timer.textContent = "25:00"
+      startBtn.textContent = "Start";
     })
 
     t += 1000;
@@ -101,5 +107,10 @@ const startTimer = function () {
 startBtn.addEventListener("dblclick", function () {
   startTimer();
   startBtn.textContent = "Stop";
+})
+
+reset.addEventListener("click", function () {
+  localStorage.clear();
+  timer.textContent = "25:00"
 })
 
