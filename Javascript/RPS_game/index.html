@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jacquarda+Bastarda+9&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="./images/rock-paper-scissors.png">
+    <script src="script.js" defer></script>
+    <title>Rock Paper Scissor</title>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>The Rock Paper Scissor <br>Game</h1>
+        <p id="attempts"></p>
+        <div class="hands">
+            <img  id="rock" class="hover active" src="./images/fist.png" style="padding: 27.5px 27.5px;" alt="Rock">
+            <img role="button" class="hover active" id="paper" style="width: 105px; padding: 25px 25px;" src="./images/hand-paper.png" alt="Paper">
+            <img role="button" class="hover active" id="scissor" style="width: 135px;" src="./images/scissors.png" alt="Scissors">
+        </div>
+        <p id="computer-ans"></p>
+        <p id="ans"></p>
+    </div>
 </body>
 </html>
